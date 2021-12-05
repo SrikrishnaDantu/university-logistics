@@ -1,0 +1,24 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card">
+                <form class="box">
+                    <br>
+                    <input type="text" class="form-control" id="username" name="username" placeholder="Username" [(ngModel)]="userData.username">
+                    <input type="email" class="form-control" id="email" name="email" placeholder= "E-Mail" [(ngModel)]="userData.email">
+<!--                     <input type="text" class="form-control" id="course" name="course" placeholder="Department" [(ngModel)]="userData.usercourse"> -->
+                    <select id="useraccess" name="useraccess" type="number" [(ngModel)]="selectedLevel">
+                        <option [ngValue]="null" [disabled]="true" [hidden]="true" >Designation</option>
+                        <option *ngFor="let level of access" [ngValue]="level">{{level.name}}</option>
+                    </select>
+                    <input type="password" class="form-control" id="password" name="password" placeholder="Password" [(ngModel)]="userData.password">
+                    <input type="password" class="form-control" id="repassword" name="repassword" placeholder="Re-Enter Password" (keyup)="checkPassword()" [(ngModel)]="confpassword">
+                    <p class="text-muted"> {{passtext}}</p>
+                    <input type="submit" value="Register" (click)="register()">
+                    <p> Have an Existing Account? Login.</p>
+                    <input type="submit" value="Login" (click)="changeToLogin()">
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,47 @@
+<!-- <button type="button" class="btn btn-primary" (click)="libraryClicked()"> Library </button> <br>
+<button type="button" class="btn btn-primary" (click)="hostelManagementClicked()"> Hostel Management </button> <br>
+<button type="button" class="btn btn-primary" (click)="videoLecturesClicked()"> Videos Tutorial </button> -->
+
+<!-- For demo purpose -->
+<div class="container">
+    <!-- <div class="pt-5 text-white">
+        <header class="py-5 mt-5">
+            <h1 class="display-4">School Management</h1>
+        </header>
+    </div> -->
+        <ul>
+        <li>
+        <a (click) = "libraryClicked()">
+        <div class="card" style="width: 320px; background-color: #87CEFA;">
+            <img class="card-img-top" src="../../assets/Images/libraryhome.svg" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Library</h5>
+              
+            </div>
+        </div>
+        </a> 
+        </li>
+
+        <li>
+        <a (click)="hostelManagementClicked()">   
+        <div class="card" style="width: 320px; background-color: #87CEFA">
+            <img class="card-img-top" src="../../assets/Images/hostelhome.svg" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Hostel</h5>
+            </div>
+        </div>
+        </a>
+    </li>
+
+        <li>
+        <a (click)="videoLecturesClicked()">
+        <div class="card" style="width: 320px; background-color: #87CEFA">
+            <img class="card-img-top" src="../../assets/Images/onlinevidhome.svg" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Online Videos</h5>
+            </div>
+        </div>
+        </a>
+    </li>
+</ul>
+</div>

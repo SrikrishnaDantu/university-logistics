@@ -1,0 +1,16 @@
+h1{
+	font-family: Roboto Slab;
+	color: White;
+}
+p{
+	font-family: Roboto Slab;
+	font-size: 110%;
+	color: white;
+}
+input{
+	font-family: Roboto Slab;
+}
+::placeholder { 
+  color: white;
+  opacity: 1; 
+}

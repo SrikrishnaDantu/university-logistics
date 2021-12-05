@@ -1,0 +1,16 @@
+<div class="container">
+</div>
+<div class="container">
+    <form>
+        <div class="form-group">
+            <label for="bookTitle">Books Title</label>
+            <input type="text" class="form-control" style="background-color: lightgray; color: black;" id="bookTitle" name="bookTitle" [(ngModel)]="booksData.title" disabled>
+        </div>
+        <div class="form-group">
+            <label for="studentID">Issued to</label>
+            <input type="text" class="form-control" style="color: black;" id="studentID" name="studentID" placeholder="enter the student ID" [(ngModel)]="booksData.issuedtoStudent" [disabled]="booksData.status === 'issued'">
+        </div>
+        <button type="submit" id="issue" class="btn btn-primary" (click)="issue()" name="issue" *ngIf="booksData.status === 'available'">Issue</button>
+        <button type="submit" id="return" class="btn btn-primary" (click)="returnBook()" name="return" *ngIf="booksData.status === 'issued'">Return</button>
+    </form>
+</div>

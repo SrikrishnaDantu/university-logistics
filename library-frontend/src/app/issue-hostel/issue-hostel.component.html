@@ -1,0 +1,25 @@
+<div class="container">
+    <!-- <h4> Hostel Management!! </h4> -->
+</div>
+<div class="container">
+    <form>
+        <div class="form-group">
+            <label for="blockName">Block Name</label>
+            <input type="text" class="form-control" id="blockName" name="blockName" [(ngModel)]="hostelData.block" disabled>
+        </div>
+        <div class="form-group">
+            <label for="studentID">Accomodated to</label>
+            <input type="text" class="form-control" id="studentID" name="studentID" placeholder="enter the student ID" [(ngModel)]="hostelData.studentId" [disabled]="hostelData.status === 'alloted'">
+        </div>
+        <div class="form-group">
+            <label for="startDate">from</label>
+            <input type="date" class="form-control" id="startDate" name="startDate" placeholder="yyyy-mm-dd" [(ngModel)]="hostelData.fromDate" [disabled]="hostelData.status === 'alloted'">
+        </div>
+        <div class="form-group">
+            <label for="endDate">To</label>
+            <input type="date" class="form-control" id="endDate" name="endDate" placeholder="yyyy-mm-dd" [(ngModel)]="hostelData.toDate" [disabled]="hostelData.status === 'alloted'">
+        </div>
+        <button type="submit" id="accomodate" class="btn btn-primary" (click)="accomodate()" name="accomodate" *ngIf="hostelData.status === 'available'">Issue</button>
+        <button type="submit" id="deaccomodate" class="btn btn-primary" (click)="deaccomodate()" name="deaccomodate" *ngIf="hostelData.status === 'alloted'">Return</button>
+    </form>
+</div>

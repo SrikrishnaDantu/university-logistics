@@ -1,0 +1,28 @@
+<div class="container" *ngIf="!showReg">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card">
+                <form class="box">
+                    <!-- <h1>Login</h1> -->
+                    <div class="uoh-logo">
+                        <img src="../../assets/Images/uohsymbolremoved2.png" alt="" />
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="username" name="username" placeholder="Username" [(ngModel)]="userData.username">
+                    </div>
+                    <div class="form-group">
+                        <input type="password" class="form-control" id="password" name="password" placeholder="Password" [(ngModel)]="userData.password">
+                    </div>
+                    <input type="submit" name="" value="Login" (click)="login()">
+                    <br>
+                    <p> Don't have an account? Sign Up. </p> 
+                    <input type="submit" name="" value="Register" (click)="changeToRegister()">
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div *ngIf="showReg">
+    <app-register></app-register>
+</div>

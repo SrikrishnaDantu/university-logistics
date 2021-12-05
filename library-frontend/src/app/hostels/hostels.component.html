@@ -1,0 +1,8 @@
+<div class="container">
+    <h1 class="text-center"> Hostel Details</h1>
+    <button class="addButton btn btn-success" (click)="addHostelRoom()" *ngIf="showRole"><i class="fa fa-plus-circle" aria-hidden="true"></i></button>
+</div>
+<div class="container" style="background-color:#87CEFA">
+    <app-hostel-table [columns]="columns" [rows]="rows" (editDataChange)="editedData($event)" (deleteDataChange)="deleteData($event)" [showActions]="true" [showPagination]="true" [showDelete]="true" [showView]="false">
+    </app-hostel-table>
+</div>
